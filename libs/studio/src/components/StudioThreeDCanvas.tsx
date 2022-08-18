@@ -17,15 +17,7 @@ const StudioThreeDCanvas = () => {
   const threeRenderer = useThreeRenderer();
   const threeControls = useThreeControls();
 
-  const [sceneReady, setSceneReady] = useState(false);
-
-  console.log('three', {
-    sceneReady,
-    threeScene,
-    threeCamera,
-    threeControls,
-    threeRenderer,
-  });
+  const [, setSceneReady] = useState(false);
 
   useEffect(() => {
     if (!threeDivRef.current) return;
