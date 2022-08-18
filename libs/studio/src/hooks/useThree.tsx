@@ -26,5 +26,7 @@ export const useThreeControls = () =>
 
 export const useThree = () => ({
   scene: useThreeSceneRef.current,
+  camera: useThreeCameraRef.current,
+  controls: useThreeControlsRef.current,
   renderer: useThreeRendererRef.current,
 });
