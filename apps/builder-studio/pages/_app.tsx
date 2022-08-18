@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import { GeistProvider, CssBaseline } from '@geist-ui/core';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,9 +8,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to builder-studio!</title>
       </Head>
-      <main className="app">
+      <GeistProvider>
+        <CssBaseline />
         <Component {...pageProps} />
-      </main>
+      </GeistProvider>
     </>
   );
 }
